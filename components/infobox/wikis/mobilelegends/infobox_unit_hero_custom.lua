@@ -187,7 +187,11 @@ function CustomHero:setLpdbData(args)
 		image = args.image,
 		date = args.releasedate,
 		extradata = mw.ext.LiquipediaDB.lpdb_create_json({
+			lane = args.lane,
+			primaryrole = args.primaryrole,
+			region = args.region,
 			releasedate = args.releasedate,
+			secondaryrole = args.secondaryrole,
 		})
 	}
 	mw.ext.LiquipediaDB.lpdb_datapoint('hero_' .. (args.heroname or self.pagename), lpdbData)
